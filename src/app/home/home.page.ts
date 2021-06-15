@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
+  public locations = [];
 
-  constructor() { }
+  constructor(
+    private data: DataService,
+  ) { }
 
   ngOnInit() {
+    this.locations = this.data.getLocations();
   }
 
 }
