@@ -1,9 +1,45 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>home</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button>
+        <img src="../../assets/menu_bar.svg" />
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button class="notification">
+        <ion-icon name="notifications-outline" color="dark"></ion-icon>
+        <span>&nbsp;</span>
+      </ion-button>
+      <ion-button class="filter">
+        <ion-icon name="funnel-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  
+  <div class="search ion-padding">
+    <ion-item lines="none">
+      <ion-input placeholder="Search your location"></ion-input>
+      <ion-icon name="search-outline" slot="start"></ion-icon>
+    </ion-item>
+  </div>
+
+  <div class="title ion-padding">
+    <h2>Locations</h2>
+    <p>See all</p>
+  </div>
+
+  <div class="location-slider ion-padding-start">
+    <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+      <ion-slide *ngFor="let location of locations">
+        <ion-col>
+          <h4>{{ location.name }}</h4>
+          <img src="{{ location.image }}" />
+        </ion-col>
+      </ion-slide>
+    </ion-slides>
+  </div>
 
 </ion-content>
