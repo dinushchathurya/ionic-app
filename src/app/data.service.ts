@@ -4,14 +4,7 @@ import { Injectable } from '@angular/core';
 export interface ILocation {
   id: number,
   name: string,
-  image: string,
-}
-
-// Product Interface
-export interface IProduct {
-  id: number,
-  name: string,
-  price: number,
+  description: string,
   image: string,
 }
 
@@ -28,75 +21,41 @@ export class DataService {
     let loc1: ILocation = {
       id: 1,
       name: 'Colombo',
-      image: '../../assets/categories/category-1.png'
+      description: 'Travel isn’t always pretty. It isn’t always comfortable. Sometimes it hurts, it even breaks your heart. But that’s okay. The journey changes you; it should change you. It leaves marks on your memory, on your consciousness, on your heart, and on your body. You take something with you. Hopefully, you leave something good behind',
+      image: '../../assets/locations/location-1.png'
     }
     let loc2: ILocation = {
       id: 2,
       name: 'Kandy',
-      image: '../../assets/categories/category-2.png'
+      description: 'Travel isn’t always pretty. It isn’t always comfortable. Sometimes it hurts, it even breaks your heart. But that’s okay. The journey changes you; it should change you. It leaves marks on your memory, on your consciousness, on your heart, and on your body. You take something with you. Hopefully, you leave something good behind',
+      image: '../../assets/locations/location-2.png'
     }
     let loc3: ILocation = {
       id: 3,
       name: 'Jaffna',
-      image: '../../assets/categories/category-3.png'
+      description: 'Travel isn’t always pretty. It isn’t always comfortable. Sometimes it hurts, it even breaks your heart. But that’s okay. The journey changes you; it should change you. It leaves marks on your memory, on your consciousness, on your heart, and on your body. You take something with you. Hopefully, you leave something good behind',
+      image: '../../assets/locations/location-3.png'
     }
-
-    locations.push(loc1, loc2, loc3);
+    let loc4: ILocation = {
+      id: 4,
+      name: 'Galle',
+      description: 'Travel isn’t always pretty. It isn’t always comfortable. Sometimes it hurts, it even breaks your heart. But that’s okay. The journey changes you; it should change you. It leaves marks on your memory, on your consciousness, on your heart, and on your body. You take something with you. Hopefully, you leave something good behind',
+      image: '../../assets/locations/location-4.png'
+    }
+    let loc5: ILocation = {
+      id: 5,
+      name: 'Hikkaduwa',
+      description: 'Travel isn’t always pretty. It isn’t always comfortable. Sometimes it hurts, it even breaks your heart. But that’s okay. The journey changes you; it should change you. It leaves marks on your memory, on your consciousness, on your heart, and on your body. You take something with you. Hopefully, you leave something good behind',
+      image: '../../assets/locations/location-5.png'
+    }
+    let loc6: ILocation = {
+      id: 6,
+      name: 'Nuwware-Eliya',
+      description: 'Travel isn’t always pretty. It isn’t always comfortable. Sometimes it hurts, it even breaks your heart. But that’s okay. The journey changes you; it should change you. It leaves marks on your memory, on your consciousness, on your heart, and on your body. You take something with you. Hopefully, you leave something good behind',
+      image: '../../assets/locations/location-6.png'
+    }
+    locations.push(loc1, loc2, loc3, loc4, loc5, loc6);
 
     return locations;
-  }
-
-  getFeaturedProducts() {
-    let products = [];
-
-    let prod1: IProduct = {
-      id: 1,
-      name: 'Womens T-Shirt',
-      price: 55,
-      image: '../../assets/products/prod-1.png'
-    }
-    let prod2: IProduct = {
-      id: 2,
-      name: 'Mens T-Shirt',
-      price: 34,
-      image: '../../assets/products/prod-2.png'
-    }
-    let prod3: IProduct = {
-      id: 1,
-      name: 'Womens T-Shirt',
-      price: 40,
-      image: '../../assets/products/prod-3.png'
-    }
-
-    products.push(prod1, prod2, prod3);
-
-    return products;
-  }
-
-  getBestSellProducts() {
-    let products = [];
-
-    let prod1: IProduct = {
-      id: 1,
-      name: 'Womens T-Shirt',
-      price: 55,
-      image: '../../assets/products/prod-4.png'
-    }
-    let prod2: IProduct = {
-      id: 2,
-      name: 'Mens T-Shirt',
-      price: 34,
-      image: '../../assets/products/prod-5.png'
-    }
-    let prod3: IProduct = {
-      id: 1,
-      name: 'Womens T-Shirt',
-      price: 40,
-      image: '../../assets/products/prod-6.png'
-    }
-
-    products.push(prod1, prod2, prod3);
-
-    return products;
   }
 }
