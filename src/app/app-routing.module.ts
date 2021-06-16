@@ -26,6 +26,14 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'location-details/:id',
+    loadChildren: () => import('./location-details/location-details.module').then( m => m.LocationDetailsPageModule)
+  },
+  {
+    path: 'all-locations',
+    loadChildren: () => import('./all-locations/all-locations.module').then( m => m.AllLocationsPageModule)
   }
 ];
 
