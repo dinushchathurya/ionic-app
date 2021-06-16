@@ -28,12 +28,12 @@
 
   <div class="title ion-padding">
     <h2>Locations</h2>
-    <p>See all</p>
+    <ion-router-link color="secondary" href="/all-locations">See all</ion-router-link>
   </div>
 
   <div class="location-slider ion-padding-start">
     <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
-      <ion-slide *ngFor="let location of locations">
+      <ion-slide *ngFor="let location of locations | slice:0:3;">
         <ion-col>
           <h4>{{ location.name }}</h4>
           <img src="{{ location.image }}" />
