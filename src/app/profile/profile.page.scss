@@ -1,0 +1,50 @@
+.backbtn {
+  margin-left: 15px;
+}
+
+.notification {
+  margin-right: 15px;
+}
+
+ion-content {
+  --padding-top: 16px;
+  --padding-bottom: 16px;
+  --padding-start: 26px;
+  --padding-end: 26px;
+}
+
+.title {
+  margin-top: 0;
+  color: #434343;
+}
+
+.profile-info {
+  padding-top: 20px;
+
+  ion-item {
+    --border-color: #97979713;
+
+    ion-label {
+      color: #919191;
+      font-size: larger;
+    }
+
+    ion-input {
+      --color: #434343;
+    }
+
+    profile-avatar {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+  }
+}
+
+.profile-update{
+    display: flex;
+    align-items: content;
+    justify-content: center;
+    padding-top: 5px;
+    border-radius: 5px;
+}
