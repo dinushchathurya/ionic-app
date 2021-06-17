@@ -1,9 +1,58 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>profile</ion-title>
+    <ion-buttons slot="start">
+      <ion-button color="primary" class="backbtn" routerLink="/home" routerDirection="back">
+        <img src='../../assets/back-dark.svg' />
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button class="notification">
+        <ion-icon name="notifications-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+  <div class="profile-info">
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input value="your name"></ion-input>
+    </ion-item>
+     <ion-item>
+       <ion-label position="floating">No</ion-label>
+       <ion-input value="361/5"></ion-input>
+     </ion-item>
+    <ion-item>
+      <ion-label position="floating">Address Line 1</ion-label>
+      <ion-input value="New Park Street"></ion-input>
+    </ion-item>
+     <ion-item>
+       <ion-label position="floating">Address Line 2</ion-label>
+       <ion-input value="Maharagama"></ion-input>
+     </ion-item>
+    <ion-item>
+      <ion-label position="floating">City</ion-label>
+      <ion-input value="Colombo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Gender</ion-label>
+      <ion-select value="Male">
+        <ion-select-option>Male</ion-select-option>
+        <ion-select-option>Female</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input value="example@example.com"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Phone Number</ion-label>
+      <ion-input value="+94 77421789"></ion-input>
+    </ion-item>
+    <ion-button expand="block" class="main-button">Update profile</ion-button>
+  </div>
+  
 </ion-content>
