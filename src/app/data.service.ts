@@ -1,12 +1,20 @@
 import { Injectable } from '@angular/core';
 
-// Category Interface
+// Location Interface
 export interface ILocation {
   id: number,
   name: string,
   description: string,
   image: string,
 }
+
+// Destination Interface
+export interface IDestination {
+  id: number,
+  name: string,
+  image: string,
+}
+
 
 @Injectable({
   providedIn: 'root'
@@ -58,4 +66,29 @@ export class DataService {
 
     return locations;
   }
+
+  getFeaturedDestinations() {
+    let destinations = [];
+
+    let dest1: IDestination = {
+      id: 1,
+      name: 'Sigiriya',
+      image: '../../assets/locations/location-1.png'
+    }
+    let dest2: IDestination = {
+      id: 2,
+      name: 'Ella rock',
+      image: '../../assets/locations/location-2.png'
+    }
+    let dest3: IDestination = {
+      id: 3,
+      name: 'Nine arce bridge',
+      image: '../../assets/locations/location-3.png'
+    }
+
+    destinations.push(dest1, dest2, dest3);
+
+    return destinations;
+  }
+
 }
