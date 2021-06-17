@@ -8,6 +8,7 @@ import { DataService } from '../data.service';
 })
 export class HomePage implements OnInit {
   public locations = [];
+  public featuredDestinations = [];
 
   constructor(
     private data: DataService,
@@ -15,6 +16,7 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
     this.locations = this.data.getLocations();
+    this.featuredDestinations = this.data.getFeaturedDestinations();
   }
 
 }
