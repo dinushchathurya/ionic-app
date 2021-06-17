@@ -34,6 +34,10 @@ const routes: Routes = [
   {
     path: 'all-locations',
     loadChildren: () => import('./all-locations/all-locations.module').then( m => m.AllLocationsPageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
   }
 ];
 
