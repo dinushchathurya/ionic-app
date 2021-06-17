@@ -42,4 +42,20 @@
     </ion-slides>
   </div>
 
+   <div class="title ion-padding">
+     <h2 class="font-bold">Featured</h2>
+     <ion-router-link color="secondary" href="">See all</ion-router-link>
+   </div>
+
+   <div class="product-slider ion-padding-start">
+     <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+       <ion-slide *ngFor="let destinations of featuredDestinations">
+         <ion-col class="ion-text-left" routerLink="/item-details" routerDirection="forward">
+           <img src="{{ destinations.image }}" />
+           <p>{{ destinations.name }}</p>
+         </ion-col>
+       </ion-slide>
+     </ion-slides>
+   </div>
+
 </ion-content>
