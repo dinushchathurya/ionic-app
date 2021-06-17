@@ -6,9 +6,13 @@
           <ion-list id="inbox-list">
 
             <ion-menu-toggle auto-hide="false">
-              <ion-item lines="none" (click)="navigate('/home', 1)" detail="false" class="ion-text-center"
-                [class.selected]="selectedIndex == 1">
+              <ion-item lines="none" (click)="navigate('/home', 1)" detail="false" class="ion-text-center" [class.selected]="selectedIndex == 1">
                 <ion-label>Home</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle auto-hide="false">
+              <ion-item lines="none" (click)="navigate('/profile', 2)" detail="false" class="ion-text-center" [class.selected]="selectedIndex == 2">
+                <ion-label>Profile</ion-label>
               </ion-item>
             </ion-menu-toggle>
 
